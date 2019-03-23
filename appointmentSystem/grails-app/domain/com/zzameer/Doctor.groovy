@@ -9,7 +9,7 @@ class Doctor {
 	String doctorEmail
 	String doctorPassword
 	String doctorOffice
-	int doctorPhone
+	String doctorPhone
 	String bio
 
     static constraints = {
@@ -21,7 +21,7 @@ class Doctor {
 	doctorEmail nullable:false, blank:false, email:true, unique:true
 	doctorPassword nullable:false, blank:false
 	doctorOffice nullable:false, blank:false, size:4..6
-	doctorPhone nullable:false, blank:false, size:11, unique:true
+	doctorPhone nullable:false, blank:false, unique:true
 	bio nullable:false, blank:false, maxsize:5000
 
     }

@@ -5,19 +5,22 @@ class Surgery {
 	String surgeryName
 	String surgeryAddress
 	String surgeryPostcode
-	int surgeryTelephone
+	String surgeryTelephone
 	int numberOfPatients
 	String surgeryDescription
-	Float openingHours
+	Float openingTime
+	Float closingTime
+	
 
     static constraints = {
 
 	surgeryName nullable:false, blank:false
 	surgeryAddress nullable:false, blank:false
 	surgeryPostcode nullable:false, blank:false, minsize:6, maxsize:7
-	surgeryTelephone nullable:false, blank:false, size:11, unique:true
+	surgeryTelephone nullable:false, blank:false, unique:true
 	numberOfPatients nullable:false, blank:false
 	surgeryDescription nullable:false, blank:false, maxsize:5000
-	openingHours nullable:false, blank:false, scale:2, min:9.00F, max:17.00F
+	openingTime nullable:false, blank:false, scale:2, min:9.00F, max:11.00F
+	closingTime nullable:false, blank:false, scale:2, min:15.00F, max:17.00F
     }
 }

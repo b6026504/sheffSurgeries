@@ -9,7 +9,7 @@ class Patient {
 	Date patientDob
 	int patientID
 	Date dateRegistered
-	int patientPhone
+	String patientPhone
 
     static constraints = {
 
@@ -20,7 +20,7 @@ class Patient {
 	patientDob nullable:false, blank:false, date:true
 	patientID nullable:false, blank:false, size:6, unique:true
 	dateRegistered nullable:false, blank:false, date:true
-	patientPhone nullable:false, blank:false, size:11
+	patientPhone nullable:false, blank:false
 
     }
 }
