@@ -2,12 +2,21 @@ package com.zzameer
 
 class Nurse {
 
-	String nurseName
+	String nurseFirstname
+	String nurseLastname
 	String qualifications
 	String nurseEmail
 	String nurseOffice
 	int nursePhone
 
     static constraints = {
+
+	nurseFirstname nullable:false, blank:false
+	nurseLastname nullable:false, blank:false
+	qualifications nullable:false, blank:false
+	nurseEmail nullable:false, blank:false, email:true, unique:true
+	nurseOffice nullable:false, blank:false, size:4..6
+	nursePhone nullable:false, blank:false, size:11, unique:true
+
     }
 }
