@@ -2,14 +2,21 @@ package com.zzameer
 
 class Patient {
 
-	String patientFirstname
 	String patientLastname
+	String patientFirstname
 	String patientAddress
 	String patientResidence
 	Date patientDob
 	int patientID
 	Date dateRegistered
 	String patientPhone
+
+	static hasMany=[prescriptions:Prescription, doctors:Doctor, surgerys:Surgery]
+	static belongsTo=[Surgery, Doctor]
+	
+	String toString(){
+	return patientLastname
+	}
 
     static constraints = {
 

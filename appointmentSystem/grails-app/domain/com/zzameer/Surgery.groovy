@@ -10,6 +10,11 @@ class Surgery {
 	String surgeryDescription
 	Float openingTime
 	Float closingTime
+
+	static hasMany=[doctors:Doctor, receptionists:Receptionist, nurses:Nurse, patients:Patient, appointments:Appointment]
+	String toString(){
+	return surgeryName
+	}
 	
 
     static constraints = {

@@ -2,8 +2,8 @@ package com.zzameer
 
 class Doctor {
 	
-	String docFirstname
 	String docLastname
+	String docFirstname
 	String qualification
 	String position
 	String doctorEmail
@@ -11,6 +11,13 @@ class Doctor {
 	String doctorOffice
 	String doctorPhone
 	String bio
+
+	static hasMany=[prescriptions:Prescription, appointments:Appointment, nurses:Nurse, patients:Patient]
+	/*static belongsTo=[Patient]*/
+
+	String toString(){
+	return docLastname
+	}
 
     static constraints = {
 

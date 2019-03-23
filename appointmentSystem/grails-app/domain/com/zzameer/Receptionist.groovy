@@ -2,12 +2,19 @@ package com.zzameer
 
 class Receptionist {
 
-	String recepFirstname
 	String recepLastname
+	String recepFirstname
 	String recepEmail
 	String recepUsername
 	String recepPassword
 	String recepPhone
+
+	static hasMany=[surgerys:Surgery]
+	static belongsTo=[Surgery]
+	
+	String toString(){
+	return recepFirstname
+	}
 
     static constraints = {
 

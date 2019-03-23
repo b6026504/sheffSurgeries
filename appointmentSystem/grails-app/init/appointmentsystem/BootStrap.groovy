@@ -23,7 +23,7 @@ class BootStrap {
 	numberOfPatients: 100,
 	surgeryDescription: 'Lorem Ipsum',
 	openingTime: 9.00,
-	closingTime: 18.30
+	closingTime: 16.00
 	).save()
 
 	def doctor1 = new Doctor(	
@@ -131,7 +131,7 @@ class BootStrap {
 	patientPaid: true,
 	daysSupply: 13
 	).save()
-
+	
 	def prescription2 = new Prescription(
 	pharmacyName: 'Centre Pharmacy',
 	prescripNumber: 1004576,
@@ -141,6 +141,44 @@ class BootStrap {
 	patientPaid: false,
 	daysSupply: 99
 	).save()
+
+	
+
+doctor1.addToAppointments(appointment1)
+surgery1.addToReceptionists(receptionist1)
+patient1.addToPrescriptions(prescription1)
+
+
+
+
+/*doctor1.addToAppointments(appointment1)
+	doctor1.addToAppointments(appointment2)
+	doctor2.addToAppointments(appointment1)
+	doctor2.addToAppointments(appointment2)
+	appointment1.addToSurgerys(surgery1)
+	appointment1.addToSurgerys(surgery2)
+	appointment2.addToSurgerys(surgery1)
+	appointment2.addToSurgerys(surgery2)
+	surgery1.addToReceptionists(receptionist1)
+	surgery1.addToReceptionists(receptionist2)
+	surgery2.addToReceptionists(receptionist1)
+	surgery2.addToReceptionists(receptionist2)
+	surgery1.addToDoctors(doctor1)
+	surgery1.addToDoctors(doctor2)
+	surgery2.addToDoctors(doctor1)
+	surgery2.addToDoctors(doctor2)
+	surgery1.addToNurses(nurse1)
+	surgery1.addToNurses(nurse2)
+	surgery1.addToNurses(nurse1)
+	surgery1.addToNurses(nurse2)
+	patient1.addToPrescription(prescription1)
+	patient1.addToPrescription(prescription2)
+	patient2.addToPrescription(prescription1)
+	patient2.addToPrescription(prescription2)
+	doctor1.addToPrescription(prescription1)
+	doctor1.addToPrescription(prescription2)
+	doctor1.addToPrescription(prescription1)
+	doctor1.addToPrescription(prescription2)*/	
 
     }
     def destroy = {
