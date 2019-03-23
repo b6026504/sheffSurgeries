@@ -2,7 +2,8 @@ package com.zzameer
 
 class Receptionist {
 
-	String recepName
+	String recepFirstname
+	String recepLastname
 	String recepEmail
 	String recepUsername
 	String recepPassword
@@ -10,7 +11,8 @@ class Receptionist {
 
     static constraints = {
 
-	recepName nullable:false, blank:false
+	recepFirstname nullable:false, blank:false
+	recepLastname nullable:false, blank:false
 	recepEmail nullable:false, blank:false, email:true, unique:true
 	recepUsername nullable:false, blank:false, unique:true
 	recepPassword nullable:false, blank:false
