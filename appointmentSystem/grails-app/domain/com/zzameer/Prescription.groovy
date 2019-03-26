@@ -10,6 +10,13 @@ class Prescription {
 	Boolean patientPaid
 	int daysSupply
 
+	static hasMany=[doctors:Doctor, patients:Patient]
+	static belongsTo=[Doctor, Patient]	
+	
+	String toString(){
+	return prescripNumber
+	}
+
     static constraints = {
 
 	pharmacyName nullable:false, blank:false

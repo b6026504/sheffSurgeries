@@ -4,7 +4,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-	def surgery1 = new Surgery(
+	/*def surgery1 = new Surgery(
 	surgeryName: 'Heeley Surgery',
 	surgeryAddress: '10 Richards Road, Sheffield',
 	surgeryPostcode: 'S2 3DT',
@@ -112,14 +112,16 @@ class BootStrap {
 	appDate: new Date('23/03/2019'),
 	roomNumber: 'C-1234',
 	appTime: 13.30,
-	appDuration: 30
+	appDuration: 30,
+	patient: patient1
 	).save()
 
 	def appointment2 = new Appointment(
 	appDate: new Date('13/03/2019'),
 	roomNumber: 'C-1001',
 	appTime: 11.10,
-	appDuration: 45
+	appDuration: 45,
+	patient: patient2
 	).save()
 
 	def prescription1 = new Prescription(
@@ -144,42 +146,33 @@ class BootStrap {
 
 	
 
-doctor1.addToAppointments(appointment1)
+
 surgery1.addToReceptionists(receptionist1)
 patient1.addToPrescriptions(prescription1)
+doctor1.addToAppointments(appointment1)
 
 
 
 
-/*doctor1.addToAppointments(appointment1)
-	doctor1.addToAppointments(appointment2)
-	doctor2.addToAppointments(appointment1)
+	doctor1.addToAppointments(appointment1)
+
+
 	doctor2.addToAppointments(appointment2)
-	appointment1.addToSurgerys(surgery1)
+
 	appointment1.addToSurgerys(surgery2)
-	appointment2.addToSurgerys(surgery1)
+
 	appointment2.addToSurgerys(surgery2)
 	surgery1.addToReceptionists(receptionist1)
 	surgery1.addToReceptionists(receptionist2)
-	surgery2.addToReceptionists(receptionist1)
-	surgery2.addToReceptionists(receptionist2)
-	surgery1.addToDoctors(doctor1)
-	surgery1.addToDoctors(doctor2)
-	surgery2.addToDoctors(doctor1)
-	surgery2.addToDoctors(doctor2)
-	surgery1.addToNurses(nurse1)
-	surgery1.addToNurses(nurse2)
-	surgery1.addToNurses(nurse1)
-	surgery1.addToNurses(nurse2)
-	patient1.addToPrescription(prescription1)
-	patient1.addToPrescription(prescription2)
+
+
+
 	patient2.addToPrescription(prescription1)
 	patient2.addToPrescription(prescription2)
-	doctor1.addToPrescription(prescription1)
-	doctor1.addToPrescription(prescription2)
-	doctor1.addToPrescription(prescription1)
-	doctor1.addToPrescription(prescription2)*/	
 
+	doctor1.addToPrescription(prescription1)
+	doctor1.addToPrescription(prescription2)	
+*/
     }
     def destroy = {
     }

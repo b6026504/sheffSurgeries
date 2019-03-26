@@ -8,8 +8,8 @@ class Appointment {
 	int appDuration
 	Patient patient
 	
-	static hasMany=[doctors:Doctor]
-	static belongsTo=[Doctor]
+	static hasMany=[surgerys:Surgery, doctors:Doctor]
+	static belongsTo=[Doctor, Surgery]
 	
 	String toString(){
 	return appDate

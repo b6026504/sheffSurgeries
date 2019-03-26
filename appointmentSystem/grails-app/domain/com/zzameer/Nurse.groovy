@@ -15,7 +15,7 @@ class Nurse {
 	String toString(){
 	return nurseLastname 
 	}
-
+	
     static constraints = {
 
 	nurseFirstname nullable:false, blank:false
