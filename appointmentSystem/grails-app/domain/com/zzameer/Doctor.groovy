@@ -12,8 +12,8 @@ class Doctor {
 	String doctorPhone
 	String bio
 
-	static hasMany=[prescriptions:Prescription, surgerys:Surgery, appointments:Appointment, nurses:Nurse, patients:Patient]
-	static belongsTo=[Patient, Surgery]
+	static hasMany=[prescriptions:Prescription, nurses:Nurse, patients:Patient, appointments:Appointment, surgerys:Surgery]
+	static belongsTo=[Patient, Nurse, Prescription, Appointment,]
 
 	String toString(){
 	return docLastname
@@ -29,7 +29,7 @@ class Doctor {
 	doctorPassword nullable:false, blank:false
 	doctorOffice nullable:false, blank:false, size:4..6
 	doctorPhone nullable:false, blank:false, unique:true
-	bio nullable:false, blank:false, maxsize:5000
+	bio nullable:false, blank:false, maxsize:5000, widget:'textarea'
 
     }
 }

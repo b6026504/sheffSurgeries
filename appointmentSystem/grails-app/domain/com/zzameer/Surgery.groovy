@@ -11,7 +11,8 @@ class Surgery {
 	Float openingTime
 	Float closingTime
 
-	static hasMany=[doctors:Doctor, receptionists:Receptionist, nurses:Nurse, patients:Patient, appointments:Appointment]
+	static hasMany=[patients:Patient, appointments:Appointment, doctors:Doctor, receptionists:Receptionist, nurses:Nurse]
+	static belongsTo=[Doctor, Nurse, Patient, Receptionist, Appointment]
 	
 	String toString(){
 	return surgeryName
@@ -25,7 +26,7 @@ class Surgery {
 	surgeryPostcode nullable:false, blank:false, minsize:6, maxsize:7
 	surgeryTelephone nullable:false, blank:false, unique:true
 	numberOfPatients nullable:false, blank:false
-	surgeryDescription nullable:false, blank:false, maxsize:5000
+	surgeryDescription nullable:false, blank:false, maxsize:5000, widget:'textarea'
 	openingTime nullable:false, blank:false, scale:2, min:9.00F, max:11.00F
 	closingTime nullable:false, blank:false, scale:2, min:15.00F, max:17.00F
     }

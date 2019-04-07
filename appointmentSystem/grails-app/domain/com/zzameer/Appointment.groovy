@@ -1,5 +1,5 @@
 package com.zzameer
-
+	
 class Appointment {
 
 	Date appDate
@@ -7,9 +7,9 @@ class Appointment {
 	Float appTime
 	int appDuration
 	Patient patient
-	
+		
 	static hasMany=[surgerys:Surgery, doctors:Doctor]
-	static belongsTo=[Doctor, Surgery]
+	static belongsTo=[Surgery, Doctor]
 	
 	String toString(){
 	return appDate
