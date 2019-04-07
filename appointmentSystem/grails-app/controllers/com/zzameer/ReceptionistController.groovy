@@ -22,7 +22,7 @@ render view:'home'
 
 else{
 
-flash.message = "invalid username and password."
+flash.message = "invalid username and/or password."
 
 render view:'login'
 
@@ -34,7 +34,7 @@ def logout={
 
 session.user = null
 
-redirect(uri:'/)
+redirect(uri:'/')
 
 }
 
