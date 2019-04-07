@@ -14,6 +14,11 @@
             Please log in below:
         </p>
 
+	<div class ="row">
+		<g:doctorToggle />
+		<g:recepToggle />
+	</div
+
         
     </section>
 </div>

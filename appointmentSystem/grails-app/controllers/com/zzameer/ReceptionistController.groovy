@@ -10,9 +10,9 @@ def login(){
 
 def validate(){
 
-def user = Receptionist.findByrecepUsername(params.username)
+def user = Receptionist.findByRecepUsername(params.username)
 
-if(user && user.recepPassword == paramas.password){
+if(user && user.recepPassword == params.password){
 
 session.user=user
 

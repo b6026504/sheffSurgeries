@@ -1,7 +1,7 @@
 package com.zzameer
 
 class AppointmentSystemTagLib {
-    static defaultEncodeAs = [taglib:'html']
+    //static defaultEncodeAs = [taglib:'html']
     //static encodeAsForTags = [tagName: [taglib:'html'], otherTagName: [taglib:'none']]
 
 def doctorToggle = {
@@ -20,12 +20,12 @@ else{
 	
 	out << "<span style='float:right; margin-right:15px'>"
 	out << "<a href='${createLink(controller:'doctor', action:'login')}'>"
-	out << "Login </a></span>"
+	out << "Doctor Login </a></span>"
 	
 	}
 
 	out << "</div><br/>"
-
+}
 def recepToggle = {
 
 	out << "<div style='margin: 20px 0 40px;'>"
@@ -42,7 +42,7 @@ else{
 	
 	out << "<span style='float:right; margin-right:15px'>"
 	out << "<a href='${createLink(controller:'receptionist', action:'login')}'>"
-	out << "Login </a></span>"
+	out << "Receptionist Login </a></span>"
 	
 	}
 

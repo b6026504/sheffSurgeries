@@ -10,9 +10,9 @@ def login(){
 
 def validate(){
 
-def user = Doctor.findBydoctorEmail(params.username)
+def user = Doctor.findByDoctorEmail(params.username)
 
-if(user && user.doctorPassword == paramas.password){
+if(user && user.doctorPassword == params.password){
 
 session.user=user
 
