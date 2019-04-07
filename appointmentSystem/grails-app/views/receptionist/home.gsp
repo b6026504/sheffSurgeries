@@ -34,15 +34,8 @@
 		</button>
 	</div>
 
-	<div class="fourth">
-		<h3>Prescription Management</h3>
-		<p>Click below to add a new prescription</p>
-		<button type="button" class="btn btn-success">
-		<g:link controller="prescription" action="create">Add Prescription<g/:link>
-		</button>
-	</div>
 
-	<div class="fifth">
+	<div class="fourth">
 		<h3>Receptionist Management</h3>
 		<p>Click below to add a new receptionist</p>
 		<button type="button" class="btn btn-success">
